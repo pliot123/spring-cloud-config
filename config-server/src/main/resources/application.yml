@@ -5,20 +5,16 @@ server:
 spring:
   application:
     name: config-service
-
   profiles:
-    active: native
+    active: native #
   cloud:
     config:
       server:
         native:
           search-locations: file:///C:\MSA-TIL\native-file-repo
+
         git:
-          uri: https://github.com/mingmingeeee/MSA-TIL
-#          username: [username]
-#          password: [password]
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health, busrefresh
+          uri: https://github.com/pliot123/spring-cloud-config.git
+#          username: [your username]
+#          password: [your password]//private repo 일때
+
