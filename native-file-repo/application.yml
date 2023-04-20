@@ -2,4 +2,4 @@ token:
   expiration_time: 86400000
   secret: user_token_native_application_changed_#2
 gateway:
-  ip: 221.141.159.111
+  ip: 192.168.30.216

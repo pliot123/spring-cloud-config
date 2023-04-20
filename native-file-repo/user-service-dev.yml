@@ -10,4 +10,4 @@ token:
   secret: my_token_native_user_service
 
 gateway:
-  ip: 221.141.159.111
+  ip: 192.168.30.216

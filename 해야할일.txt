@@ -1,0 +1,4 @@
+ip주소 바꾸기
+
+config-server 안에 bootstrap
+location 설정 변경

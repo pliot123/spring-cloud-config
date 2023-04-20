@@ -1,16 +1,9 @@
-# spring:
-#   datasource:
-#     driver-class-name: org.h2.Driver
-#     url: jdbc:h2:mem:testdb
-#     username: sa
-#     password: '{cipher}44ee8c1617738a13f6a71e4f16de035a1278348dd4d6693c2aa01156e52dff13'
-
 spring:
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb
     username: sa
-    password: '{cipher}5b19cc931f1c8d7962dfdf1b963cad7ffaa41d5be45f935bcf9520affc56f495'
+    password: '{cipher}AQBXd50PQ5W0PSC+LlXloUHXEMaWMM6fbL6+46MvvRzv3eSj7ihbdGsDXpYaSff6DAM9B2h+obsUwedUBp5tiMH4WB5ZU0A9bM+WWGaACtS4IXG50AgwuMeOY481Bio7ARSGTreZ8HLLRNjONLAWJSiVMzl1BGZmSrrMGMT+JaDvUfqU1HpnuO55A8cvLdZRGD4twk4U/1VGGmqyQHfzUEFcr/LQsg2yhrpZwKxj1hXQcykBh4KLanfGPVlSpBSIJe6QDuqwJNsq3OzNTWwT2mTTyrsT/I/ZLCGF7XDEFhWD7MeyXDkaM1m/i+wvCqxs1NqTQyrF8yxASinkvMOIvdxLaNc1Qnpp0lKifYinnrURAue6vobTAAuhM1R6uSc2RL8='
 
 
 token:
@@ -18,4 +11,7 @@ token:
   secret: my_token_native_user_service
 
 gateway:
-  ip: 221.141.159.111
+  ip: 192.168.30.216
+
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
