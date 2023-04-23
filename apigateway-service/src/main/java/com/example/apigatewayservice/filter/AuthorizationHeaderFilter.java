@@ -30,14 +30,15 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
     public GatewayFilter apply(Config config) {
         return ((exchange, chain) -> {
             ServerHttpRequest request = exchange.getRequest();
-            
+
+
             if(!request.getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
                 return onError(exchange, "no authorization header", HttpStatus.UNAUTHORIZED);
             }
             
             String authorizationHeader = request.getHeaders().get(org.springframework.http.HttpHeaders.AUTHORIZATION).get(0);
             String jwt = authorizationHeader.replace("Bearer", "");
-            
+
             if(!isJwtValid(jwt)) {
                 return onError(exchange, "JWT token is not valid", HttpStatus.UNAUTHORIZED);
             }
@@ -54,7 +55,10 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
         String subject = null;
 
 
+        System.out.println(jwt);
+
         try {
+            System.out.println("시크릿 토큰ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ"+env.getProperty("token.secret"));
             subject = Jwts.parser().setSigningKey(env.getProperty("token.secret"))
                     .parseClaimsJws(jwt).getBody()
                     .getSubject();

@@ -3,8 +3,7 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb
     username: sa
-    password: '{cipher}AQBXd50PQ5W0PSC+LlXloUHXEMaWMM6fbL6+46MvvRzv3eSj7ihbdGsDXpYaSff6DAM9B2h+obsUwedUBp5tiMH4WB5ZU0A9bM+WWGaACtS4IXG50AgwuMeOY481Bio7ARSGTreZ8HLLRNjONLAWJSiVMzl1BGZmSrrMGMT+JaDvUfqU1HpnuO55A8cvLdZRGD4twk4U/1VGGmqyQHfzUEFcr/LQsg2yhrpZwKxj1hXQcykBh4KLanfGPVlSpBSIJe6QDuqwJNsq3OzNTWwT2mTTyrsT/I/ZLCGF7XDEFhWD7MeyXDkaM1m/i+wvCqxs1NqTQyrF8yxASinkvMOIvdxLaNc1Qnpp0lKifYinnrURAue6vobTAAuhM1R6uSc2RL8='
-
+    password: "{cipher}AQBXd50PQ5W0PSC+LlXloUHXEMaWMM6fbL6+46MvvRzv3eSj7ihbdGsDXpYaSff6DAM9B2h+obsUwedUBp5tiMH4WB5ZU0A9bM+WWGaACtS4IXG50AgwuMeOY481Bio7ARSGTreZ8HLLRNjONLAWJSiVMzl1BGZmSrrMGMT+JaDvUfqU1HpnuO55A8cvLdZRGD4twk4U/1VGGmqyQHfzUEFcr/LQsg2yhrpZwKxj1hXQcykBh4KLanfGPVlSpBSIJe6QDuqwJNsq3OzNTWwT2mTTyrsT/I/ZLCGF7XDEFhWD7MeyXDkaM1m/i+wvCqxs1NqTQyrF8yxASinkvMOIvdxLaNc1Qnpp0lKifYinnrURAue6vobTAAuhM1R6uSc2RL8="
 
 token:
   expiration_time: 86400000
@@ -15,3 +14,5 @@ gateway:
 
 order_service:
   url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    orders_is_empty: User's order is Empty.

@@ -54,7 +54,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie # 매번 새로운 request처럼 받기 위해 header 초기화 (Cookie 제거)
             - RewritePath=/user-service/(?<segment>.*), /$\{segment} # 왼 처럼 들어오면 오 처럼 바꾸겠다는 의미
-            - AuthorizationHeaderFilter # Filter 처리 => 로그인 되었는지? 아닌지?
+#            - AuthorizationHeaderFilter # Filter 처리 => 로그인 되었는지? 아닌지?
 
         - id: user-service
           uri: lb://USER-SERVICE # eureka에 등록되어 있는 name 쓰기
